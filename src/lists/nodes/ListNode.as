@@ -1,9 +1,8 @@
-package lists.nodes
-{
-	public class ListNode
-	{
-		public var previous : ListNode;
-		public var next : ListNode;
-		public var data : *;
-	}
+package lists.nodes {
+
+public class ListNode {
+	public var previous:ListNode;
+	public var next:ListNode;
+	public var data:*;
+}
 }
