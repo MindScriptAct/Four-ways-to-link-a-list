@@ -29,7 +29,14 @@ public class AddItemsTest extends TestSuite {
 		name = "Add Items Test";
 		tareTest = new MethodTest(tare);
 		iterations = 1;
-		tests = [new MethodTest(testArrayAdd, null, "testArrayAdd", 0, 1, "Array add"), new MethodTest(testVectorAdd, null, "testVectorAdd", 0, 1, "Vector add"), new MethodTest(testNodeContainsDataListAdd, null, "testNodeContainsDataListAdd", 0, 1, "NodeContainsDataList add"), new MethodTest(testDataExtendsNodeListAdd, null, "testDataExtendsNodeListAdd", 0, 1, "DataExtendsNodeList add"), new MethodTest(testDataIsNodeListAdd, null, "testDataIsNodeListAdd", 0, 1, "DataIsNodeList add"), new MethodTest(testNoNodeListAdd, null, "testNoNodeListAdd", 0, 1, "NoNodeList add"),];
+		tests = [ //
+			new MethodTest(testArrayAdd, null, "testArrayAdd", 0, 1, "Array add"), //
+			new MethodTest(testVectorAdd, null, "testVectorAdd", 0, 1, "Vector add"), //
+			new MethodTest(testNodeContainsDataListAdd, null, "testNodeContainsDataListAdd", 0, 1, "NodeContainsDataList add"), //
+			new MethodTest(testDataExtendsNodeListAdd, null, "testDataExtendsNodeListAdd", 0, 1, "DataExtendsNodeList add"), //
+			new MethodTest(testDataIsNodeListAdd, null, "testDataIsNodeListAdd", 0, 1, "DataIsNodeList add"), //
+			new MethodTest(testNoNodeListAdd, null, "testNoNodeListAdd", 0, 1, "NoNodeList add"), //
+			];
 		init();
 	}
 	

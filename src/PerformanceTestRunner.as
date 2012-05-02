@@ -1,4 +1,7 @@
 package {
+import flash.events.DataEvent;
+import flash.events.Event;
+import flash.system.Capabilities;
 import tests.AddItemsTest;
 import tests.LoopItemsTest;
 import tests.RemoveItemsTest;
@@ -12,6 +15,7 @@ import flash.text.TextField;
 
 public class PerformanceTestRunner extends Sprite {
 	private var out:TextField;
+	private var performanceTest:PerformanceTest;
 	
 	public function PerformanceTestRunner() {
 		out = new TextField();
@@ -19,17 +23,17 @@ public class PerformanceTestRunner extends Sprite {
 		out.height = stage.stageHeight;
 		addChild(out);
 		
-		PerformanceTest.getInstance().delay = 100;
+		performanceTest = PerformanceTest.getInstance();
 		
-		var log:TableLog = new TableLog();
-		log.out = logTest;
-		log.start("Node collection performance tests.");
+		performanceTest.delay = 100;
 		
-		primeJitCompiler();
+		performanceTest.addEventListener(Event.COMPLETE, handleComplete);
+		performanceTest.addEventListener(Event.CLOSE, handleAllComplete);
+		
 		queueTests();
-	}
-	
-	private function primeJitCompiler():void {
+		
+		out.appendText("Running tests on " + Capabilities.version + " " + (Capabilities.isDebugger ? "DEBUG" : "RELEASE") + "\n");
+
 	}
 	
 	private function queueTests():void {
@@ -38,9 +42,12 @@ public class PerformanceTestRunner extends Sprite {
 		PerformanceTest.queue(new LoopItemsTest());
 	}
 	
-	private function logTest(str:*):void {
-		out.appendText(String(str) + "\n");
-		out.scrollV = out.maxScrollV;
+	private function handleComplete(event:Event):void {
+		out.appendText(performanceTest.currentTest.name + ":" + "\t" + ((performanceTest.currentTest.time - performanceTest.currentTestSuite.tareTime) / performanceTest.currentTest.loops) + "\t" + performanceTest.currentTest.toString() + "\n");
+	}
+	
+	private function handleAllComplete(event:Event):void {
+		out.appendText("DONE.");
 	}
 }
 }

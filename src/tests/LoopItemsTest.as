@@ -26,7 +26,14 @@ public class LoopItemsTest extends TestSuite {
 		name = "Loop Items Test";
 		tareTest = new MethodTest(tare);
 		iterations = 1;
-		tests = [new MethodTest(testArrayLoop, null, "testArrayLoop", 0, 1, "Array loop"), new MethodTest(testVectorLoop, null, "testVectorLoop", 0, 1, "Vector loop"), new MethodTest(testNodeContainsDataListLoop, null, "testNodeContainsDataListLoop", 0, 1, "NodeContainsDataList loop"), new MethodTest(testDataExtendsNodeListLoop, null, "testDataExtendsNodeListLoop", 0, 1, "DataExtendsNodeList loop"), new MethodTest(testDataIsNodeListLoop, null, "testDataIsNodeListLoop", 0, 1, "DataIsNodeList loop"), new MethodTest(testNoNodeListLoop, null, "testNoNodeListLoop", 0, 1, "NoNodeList loop"),];
+		tests = [ //
+			new MethodTest(testArrayLoop, null, "testArrayLoop", 0, 1, "Array loop"), //
+			new MethodTest(testVectorLoop, null, "testVectorLoop", 0, 1, "Vector loop"), //
+			new MethodTest(testNodeContainsDataListLoop, null, "testNodeContainsDataListLoop", 0, 1, "NodeContainsDataList loop"), //
+			new MethodTest(testDataExtendsNodeListLoop, null, "testDataExtendsNodeListLoop", 0, 1, "DataExtendsNodeList loop"), //
+			new MethodTest(testDataIsNodeListLoop, null, "testDataIsNodeListLoop", 0, 1, "DataIsNodeList loop"), //
+			new MethodTest(testNoNodeListLoop, null, "testNoNodeListLoop", 0, 1, "NoNodeList loop"), //
+			];
 		init();
 	}
 	

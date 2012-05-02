@@ -29,7 +29,14 @@ public class RemoveItemsTest extends TestSuite {
 		name = "Remove Items Test";
 		tareTest = new MethodTest(tare);
 		iterations = 1;
-		tests = [new MethodTest(testArrayRemove, null, "testArrayRemove", 0, 1, "Array remove"), new MethodTest(testVectorRemove, null, "testVectorRemove", 0, 1, "Vector remove"), new MethodTest(testNodeContainsDataListRemove, null, "testNodeContainsDataListRemove", 0, 1, "NodeContainsDataList remove"), new MethodTest(testDataExtendsNodeListRemove, null, "testDataExtendsNodeListRemove", 0, 1, "DataExtendsNodeList remove"), new MethodTest(testDataIsNodeListRemove, null, "testDataIsNodeListRemove", 0, 1, "DataIsNodeList remove"), new MethodTest(testNoNodeListRemove, null, "testNoNodeListRemove", 0, 1, "NoNodeList remove"),];
+		tests = [ //
+			new MethodTest(testArrayRemove, null, "testArrayRemove", 0, 1, "Array remove"), //
+			new MethodTest(testVectorRemove, null, "testVectorRemove", 0, 1, "Vector remove"), //
+			new MethodTest(testNodeContainsDataListRemove, null, "testNodeContainsDataListRemove", 0, 1, "NodeContainsDataList remove"), //
+			new MethodTest(testDataExtendsNodeListRemove, null, "testDataExtendsNodeListRemove", 0, 1, "DataExtendsNodeList remove"), //
+			new MethodTest(testDataIsNodeListRemove, null, "testDataIsNodeListRemove", 0, 1, "DataIsNodeList remove"), //
+			new MethodTest(testNoNodeListRemove, null, "testNoNodeListRemove", 0, 1, "NoNodeList remove"), //
+			];
 		init();
 	}
 	
